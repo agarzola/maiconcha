@@ -72,12 +72,15 @@ h1 {
   text-shadow: 0 0 2rem var(--warm-light);
 }
 
-.drop-cap {
-  display: block;
-  float: left;
-  margin: 0 0.4rem -0.4rem -0.3rem;
-  font-size: 4.5rem;
-  line-height: 0.9;
+.language-link {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  font-style: italic;
+}
+
+a {
+  color: rgb(119 57 33);
 }
 
 .wrapper {
@@ -85,6 +88,14 @@ h1 {
   --gap: 4rem;
   max-width: var(--measure);
   margin: 1.8rem auto 0;
+}
+
+.drop-cap {
+  display: block;
+  float: left;
+  margin: 0 0.4rem -0.4rem -0.3rem;
+  font-size: 4.5rem;
+  line-height: 0.9;
 }
 
 p {
