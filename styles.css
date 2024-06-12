@@ -1,0 +1,161 @@
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/PTSerif-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/PTSerif-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('./fonts/PTSerif-Italic.ttf');
+}
+
+@font-face {
+  font-family: 'PT Serif';
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+  src: url('./fonts/PTSerif-BoldItalic.ttf');
+}
+
+:root {
+  --warm-light: rgb(246 239 233 / 1);
+}
+
+html {
+  font-family: 'PT Serif', 'Times New Roman', serif;
+  font-size: 18px;
+  color: #313828;
+}
+
+body {
+  padding: 1.1rem 1.1rem 2rem;
+  background-color: var(--warm-light);
+  background-image:
+    linear-gradient(180deg, rgba(246, 239, 233, 0.0) 58vw, rgba(246, 239, 233, 0.9) 76vw),
+    url('./images/flowers.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  max-width: 52rem;
+  margin: 0 auto;
+  font-weight: bold;
+  text-align: center;
+  font-size: 1rem;
+}
+
+img {
+  width: 100%;
+  max-width: 40rem;
+  box-shadow: 0.3rem 0.3rem 1rem rgb(58 18 0 / 0.4);
+}
+
+h1 {
+  margin: 2rem 0 0;
+  font-style: italic;
+  line-height: 1.2;
+  text-shadow: 0 0 2rem var(--warm-light);
+}
+
+.drop-cap {
+  display: block;
+  float: left;
+  margin: 0 0.4rem -0.4rem -0.3rem;
+  font-size: 4.5rem;
+  line-height: 0.9;
+}
+
+.wrapper {
+  --measure: 24rem;
+  --gap: 4rem;
+  max-width: var(--measure);
+  margin: 1.8rem auto 0;
+}
+
+p {
+  margin: 0;
+}
+
+p + p {
+  margin-top: 0.4rem;
+  text-indent: 1rem;
+}
+
+.byline {
+  margin-top: 2rem;
+}
+
+.byline,
+.date {
+  margin-right: 0.6rem;
+  font-weight: bold;
+  text-align: right;
+}
+
+@media all and (min-width: 24rem) {
+  header {
+    font-size: 1.4rem;
+  }
+}
+
+@media all and (min-width: 48rem) {
+  body {
+    padding: 2rem 2rem 4rem;
+    background-image:
+      linear-gradient(180deg, rgba(246, 239, 233, 0.0) 25rem, rgba(246, 239, 233, 0.9) 34rem),
+      url('./images/flowers.jpg');
+  }
+
+  h1 {
+    margin-top: 3rem;
+  }
+}
+
+@media all and (min-width: 72rem) {
+  body {
+    padding: 4rem;
+    background-image:
+      linear-gradient(180deg, rgba(246, 239, 233, 0.0) 28rem, rgba(246, 239, 233, 0.9) 50rem),
+      url('./images/flowers.jpg');
+  }
+
+  header {
+    font-size: 1.8rem;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  .wrapper {
+    max-width: calc((var(--measure) * 2) + var(--gap));
+    columns: 2;
+    column-gap: var(--gap);
+  }
+
+  .break-columns {
+    break-before: column;
+    margin-top: 0;
+  }
+}
+
+/* @media all and (min-width: 96rem) {
+ *   html {
+ *     font-size: 24px;
+ *   }
+ * } */
